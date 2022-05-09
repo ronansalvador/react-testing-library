@@ -29,7 +29,7 @@ describe('Componente FavoritePokemoons', () => {
     userEvent.click(checkFavorite);
     const favorites = screen.getByRole('link', { name: /favorite pokémons/i });
     userEvent.click(favorites);
-    const cardsFavorite = screen.getAllByRole('link', { name: /more details/i })
+    const cardsFavorite = screen.getAllByRole('link', { name: /more details/i });
     expect(cardsFavorite.length).toBe(1);
     screen.logTestingPlaygroundURL();
   });
